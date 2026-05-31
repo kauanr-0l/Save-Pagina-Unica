@@ -21,5 +21,29 @@ body{
 
 aside{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(148, 144, 144);
+    width:  20dvh;
+    height: 300px;
+    padding: 10px;
+    gap: 10px;
+    
 
+}
+
+aside > button{
+    border: rgb(0, 255, 0) 500px;
+
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
+
+article > img{
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
 }
