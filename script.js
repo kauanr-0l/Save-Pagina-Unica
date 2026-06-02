@@ -31,3 +31,11 @@ btnDesafio1.addEventListener("click", () => {
     conversor.classList.add("ativo")
 
 })
+
+function mostrarDesafio(desafioAtivo) {
+  desafios.forEach(item => {
+    item.classList.remove("ativo")
+  })
+
+  desafioAtivo.classList.add("ativo")
+}
