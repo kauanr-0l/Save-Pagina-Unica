@@ -4,55 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Pagina Unica</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Pagina Unica</h1>
+        <h1>Página Única</h1>
     </header>
 
     <aside>
-        <button data-section="conversor">Desafio1</button>
-        <button data-section="imc">Desafio2</button>
-        <button data-section="temperatura">Desafio3</button>
-        <button data-section="velocidade">Desafio4</button>
-        <button data-section="massa">Desafio5</button>
-        <button data-section="regra-de-tres">Desafio6</button>
+        <button data-section="conversor">Desafio 1</button>
+        <button data-section="imc">Desafio 2</button>
+        <button data-section="temperatura">Desafio 3</button>
+        <button data-section="velocidade">Desafio 4</button>
+        <button data-section="massa">Desafio 5</button>
+        <button data-section="regra-de-tres">Desafio 6</button>
     </aside>
 
     <main>
 
         <section id="conversor" class="pagina">
             <h2>Conversor de Moedas</h2>
-            <p>Mensagem do desafio 1.</p>
+            <p>Conteúdo do desafio 1.</p>
         </section>
 
         <section id="imc" class="pagina">
             <h2>Cálculo de IMC por Gênero</h2>
-            <p>Mensagem do desafio 2.</p>
+
+            <form id="formImc">
+
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" placeholder="Ex: 70">
+
+                <label for="altura">Altura (m)</label>
+                <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+
+                <p>Gênero:</p>
+
+                <div class="genero">
+                    <input type="radio" name="genero" id="masculino">
+                    <label for="masculino">Masculino</label>
+
+                    <input type="radio" name="genero" id="feminino">
+                    <label for="feminino">Feminino</label>
+                </div>
+
+                <button type="button" id="calcularImc">
+                    Calcular IMC
+                </button>
+
+            </form>
+
+            <div id="resultadoImc">
+                Resultado aparecerá aqui
+            </div>
         </section>
 
         <section id="temperatura" class="pagina">
             <h2>Conversor de Temperatura</h2>
-            <p>Mensagem do desafio 3.</p>
+            <p>Conteúdo do desafio 3.</p>
         </section>
 
         <section id="velocidade" class="pagina">
             <h2>Conversor de Velocidade</h2>
-            <p>Mensagem do desafio 4.</p>
+            <p>Conteúdo do desafio 4.</p>
         </section>
 
         <section id="massa" class="pagina">
             <h2>Conversor de Massa</h2>
-            <p>Mensagem do desafio 5.</p>
+            <p>Conteúdo do desafio 5.</p>
         </section>
 
         <section id="regra-de-tres" class="pagina">
             <h2>Ferramenta de Regra de Três</h2>
-            <p>Mensagem do desafio 6.</p>
+            <p>Conteúdo do desafio 6.</p>
         </section>
 
     </main>
