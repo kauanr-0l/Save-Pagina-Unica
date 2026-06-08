@@ -4,68 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Utilitários</title>
     <link rel="stylesheet" href="style.css">
-    <title>Pagina Unica</title>
 </head>
 
 <body>
+
     <header>
-        <h1>Pagina Unica</h1>
+        <h1>Dashboard de Utilitários</h1>
     </header>
 
-
-
     <aside>
-            
-            <button id="btnDesafio1">Desafio1</button>
-       
-        <button id="btnDesafio2">Desafio2</button>
-        <button id="btnDesafio3">Desafio3</button>
-        <button id="btnDesafio4">Desafio4</button>
-        <button id="btnDesafio5">Desafio5</button>
-        <button id="btnDesafio6">Desafio6</button>
+        <button data-section="conversor">Conversor de Moedas</button>
+        <button data-section="imc">IMC</button>
+        <button data-section="temperatura">Temperatura</button>
+        <button data-section="velocidade">Velocidade</button>
+        <button data-section="massa">Massa</button>
+        <button data-section="regra-de-tres">Regra de Três</button>
     </aside>
 
     <main>
 
-        <section id="conversor">
+        <!-- DESAFIO 1 -->
+        <section id="conversor" class="pagina">
+
             <h2>Conversor de Moedas</h2>
 
+            <label for="valorMoeda">Valor</label>
+            <input type="number" id="valorMoeda" placeholder="Digite o valor">
+
+            <label for="tipoConversao">Conversão</label>
+
+            <select id="tipoConversao">
+                <option value="brl-usd">BRL → USD</option>
+                <option value="usd-brl">USD → BRL</option>
+            </select>
+
+            <button id="btnConverterMoeda">
+                Converter
+            </button>
+
+            <div id="resultadoMoeda"></div>
+
         </section>
 
-        <section id="imc">
+        <!-- DESAFIO 2 -->
+        <section id="imc" class="pagina">
+
             <h2>Cálculo de IMC por Gênero</h2>
 
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" placeholder="Ex: 70">
+
+            <label for="altura">Altura (m)</label>
+            <input type="number" step="0.01" id="altura" placeholder="Ex: 1.75">
+
+            <p>Gênero:</p>
+
+            <div class="genero">
+
+                <input
+                    type="radio"
+                    name="genero"
+                    id="masculino"
+                    value="masculino">
+
+                <label for="masculino">
+                    Masculino
+                </label>
+
+                <input
+                    type="radio"
+                    name="genero"
+                    id="feminino"
+                    value="feminino">
+
+                <label for="feminino">
+                    Feminino
+                </label>
+
+            </div>
+
+            <button id="calcularImc">
+                Calcular IMC
+            </button>
+
+            <div id="resultadoImc"></div>
+
         </section>
 
-        <section id="temperatura">
+        <!-- DESAFIO 3 -->
+        <section id="temperatura" class="pagina">
             <h2>Conversor de Temperatura</h2>
-
+            <p>Em desenvolvimento...</p>
         </section>
 
-        <section id="velocidade">
+        <!-- DESAFIO 4 -->
+        <section id="velocidade" class="pagina">
             <h2>Conversor de Velocidade</h2>
-
+            <p>Em desenvolvimento...</p>
         </section>
 
-        <section id="massa">
+        <!-- DESAFIO 5 -->
+        <section id="massa" class="pagina">
             <h2>Conversor de Massa</h2>
-
+            <p>Em desenvolvimento...</p>
         </section>
 
-        <section id="regra-de-tres">
-            <h2>Ferramenta de Regra de Três</h2>
-
+        <!-- DESAFIO 6 -->
+        <section id="regra-de-tres" class="pagina">
+            <h2>Regra de Três</h2>
+            <p>Em desenvolvimento...</p>
         </section>
 
-        
     </main>
 
+    <script src="script.js"></script>
 
-
-
-<script src="script.js"></script>
 </body>
-
 
 </html>
