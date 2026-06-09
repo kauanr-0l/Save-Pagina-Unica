@@ -16,3 +16,38 @@ aside.addEventListener("click", (e) => {
     document.getElementById(secao).classList.add("ativa");
 });
 
+
+
+
+function calclarIMC(peso, altura) {
+return peso / (altura * altura);
+}
+
+function classificarIMC(imc, genero){
+
+    if (genero === "masculino") {
+
+        if (imc < 18.5) return "Abaixo do peso";
+        if (imc <= 24.9) return "Peso normal";
+        if (imc <= 29.9) return "Sobrepeso";
+        
+        return "Obsesidade";
+
+    }
+
+    if (imc < 18.5) return "Abaixo do peso";
+    if (imc <= 24.9) return "Peso normal";
+    if (imc <= 29.9) return "Sobrepeso";
+    
+    return "Obsesidade";
+
+
+
+}
+
+
+const btnIMC = document.querySelector("#calcularImc");
+
+if (btnIMC){
+    
+}
