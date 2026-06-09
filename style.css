@@ -4,80 +4,74 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+}
+
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     background-color: dimgray;
     color: white;
+    text-align: center;
     padding: 15px;
 }
 
-body {
+.container {
     display: flex;
-    flex-wrap: wrap;
+    min-height: calc(100vh - 58px);
 }
 
 aside {
+    width: 220px;
+    background-color: rgb(148, 144, 144);
+
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgb(148, 144, 144);
-    width: 180px;
-    min-height: 100vh;
-    padding: 15px;
     gap: 10px;
+
+    padding: 15px;
 }
 
 aside button {
-    width: 100%;
     padding: 10px;
     cursor: pointer;
+    border: none;
 }
 
 main {
     flex: 1;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 20px;
+
+    background-color: #f5f5f5;
 }
 
-/* Todas começam escondidas */
 .pagina {
     display: none;
 }
 
-/* Apenas a selecionada aparece */
 .ativa {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 350px;
+
+    width: 450px;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#conversor input,
-#conversor select,
-#imc input {
+input,
+select,
+button {
     padding: 10px;
-}
-
-#btnConverterMoeda,
-#calcularImc {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.genero {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#resultadoMoeda,
-#resultadoImc {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
 }

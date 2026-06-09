@@ -11,114 +11,89 @@
 <body>
 
     <header>
-        <h1>Super atividade
-        </h1>
+        <h1>Dashboard de Utilitários</h1>
     </header>
 
-    <aside>
-        <button data-section="conversor">Conversor de Moedas</button>
-        <button data-section="imc">IMC</button>
-        <button data-section="temperatura">Temperatura</button>
-        <button data-section="velocidade">Velocidade</button>
-        <button data-section="massa">Massa</button>
-        <button data-section="regra-de-tres">Regra de Três</button>
-    </aside>
+    <div class="container">
 
-    <main>
+        <aside>
+            <button data-section="conversor">Conversor de Moedas</button>
+            <button data-section="imc">IMC</button>
+            <button data-section="temperatura">Temperatura</button>
+            <button data-section="velocidade">Velocidade</button>
+            <button data-section="massa">Massa</button>
+            <button data-section="regra-de-tres">Regra de Três</button>
+        </aside>
 
-        <!-- DESAFIO 1 -->
-        <section id="conversor" class="pagina">
+        <main>
 
-            <h2>Conversor de Moedas</h2>
+            <section id="conversor" class="pagina">
 
-            <label for="valorMoeda">Valor</label>
-            <input type="number" id="valorMoeda" placeholder="Digite o valor">
+                <h2>Conversor de Moedas</h2>
 
-            <label for="tipoConversao">Conversão</label>
+                <label for="valorMoeda">Valor</label>
+                <input type="number" id="valorMoeda">
 
-            <select id="tipoConversao">
-                <option value="brl-usd">BRL → USD</option>
-                <option value="usd-brl">USD → BRL</option>
-            </select>
+                <label for="tipoConversao">Conversão</label>
 
-            <button id="btnConverterMoeda">
-                Converter
-            </button>
+                <select id="tipoConversao">
+                    <option value="brl-usd">BRL → USD</option>
+                    <option value="usd-brl">USD → BRL</option>
+                </select>
 
-            <div id="resultadoMoeda"></div>
+                <button id="btnConverterMoeda">
+                    Converter
+                </button>
 
-        </section>
+                <div id="resultadoMoeda"></div>
 
-        <!-- DESAFIO 2 -->
-        <section id="imc" class="pagina">
+            </section>
 
-            <h2>Cálculo de IMC por Gênero</h2>
+            <section id="imc" class="pagina">
 
-            <label for="peso">Peso (kg)</label>
-            <input type="number" id="peso" placeholder="Ex: 70">
+                <h2>Cálculo de IMC por Gênero</h2>
 
-            <label for="altura">Altura (m)</label>
-            <input type="number" step="0.01" id="altura" placeholder="Ex: 1.75">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso">
 
-            <p>Gênero:</p>
+                <label for="altura">Altura (m)</label>
+                <input type="number" step="0.01" id="altura">
 
-            <div class="genero">
+                <p>Gênero:</p>
 
-                <input
-                    type="radio"
-                    name="genero"
-                    id="masculino"
-                    value="masculino">
+                <div class="genero">
 
-                <label for="masculino">
-                    Masculino
-                </label>
+                    <input
+                        type="radio"
+                        name="genero"
+                        id="masculino"
+                        value="masculino">
 
-                <input
-                    type="radio"
-                    name="genero"
-                    id="feminino"
-                    value="feminino">
+                    <label for="masculino">
+                        Masculino
+                    </label>
 
-                <label for="feminino">
-                    Feminino
-                </label>
+                    <input
+                        type="radio"
+                        name="genero"
+                        id="feminino"
+                        value="feminino">
 
-            </div>
+                    <label for="feminino">
+                        Feminino
+                    </label>
 
-            <button id="calcularImc">
-                Calcular IMC
-            </button>
+                </div>
 
-            <div id="resultadoImc"></div>
+                <button id="calcularImc">
+                    Calcular IMC
+                </button>
 
-        </section>
+                <div id="resultadoImc"></div>
 
-        <!-- DESAFIO 3 -->
-        <section id="temperatura" class="pagina">
-            <h2>Conversor de Temperatura</h2>
-            <p>Em desenvolvimento...</p>
-        </section>
+            </section>
 
-        <!-- DESAFIO 4 -->
-        <section id="velocidade" class="pagina">
-            <h2>Conversor de Velocidade</h2>
-            <p>Em desenvolvimento...</p>
-        </section>
-
-        <!-- DESAFIO 5 -->
-        <section id="massa" class="pagina">
-            <h2>Conversor de Massa</h2>
-            <p>Em desenvolvimento...</p>
-        </section>
-
-        <!-- DESAFIO 6 -->
-        <section id="regra-de-tres" class="pagina">
-            <h2>Regra de Três</h2>
-            <p>Em desenvolvimento...</p>
-        </section>
-
-    </main>
+           
 
     <script src="script.js"></script>
 
