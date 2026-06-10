@@ -1,53 +1,65 @@
- 
-
 const paginas = document.querySelectorAll(".pagina");
 const aside = document.querySelector("aside");
 
 aside.addEventListener("click", (e) => {
+  const secao = e.target.dataset.section;
 
-    const secao = e.target.dataset.section;
+  if (!secao) return;
 
-    if (!secao) return;
+  paginas.forEach((pagina) => {
+    pagina.classList.remove("ativa");
+  });
 
-    paginas.forEach((pagina) => {
-        pagina.classList.remove("ativa");
-    });
-
-    document.getElementById(secao).classList.add("ativa");
+  document.getElementById(secao).classList.add("ativa");
 });
 
+// Calculo IMC//
 
-
-
-function calclarIMC(peso, altura) {
-return peso / (altura * altura);
+function calcularIMC(peso, altura) {
+  return peso / (altura * altura);
 }
 
-function classificarIMC(imc, genero){
-
-    if (genero === "masculino") {
-
-        if (imc < 18.5) return "Abaixo do peso";
-        if (imc <= 24.9) return "Peso normal";
-        if (imc <= 29.9) return "Sobrepeso";
-        
-        return "Obsesidade";
-
-    }
-
+function classificarIMC(imc, genero) {
+  if (genero === "masculino") {
     if (imc < 18.5) return "Abaixo do peso";
     if (imc <= 24.9) return "Peso normal";
     if (imc <= 29.9) return "Sobrepeso";
-    
-    return "Obsesidade";
 
+    return "Obesidade";
+  }
 
+  if (imc < 18.5) return "Abaixo do peso";
+  if (imc <= 24.9) return "Peso normal";
+  if (imc <= 29.9) return "Sobrepeso";
 
+  return "Obesidade";
 }
 
+const btnImc = document.querySelector("#calcularImc");
 
-const btnIMC = document.querySelector("#calcularImc");
+if (btnImc) {
+  btnImc.addEventListener("click", () => {
+    const peso = Number(document.querySelector("#peso").value);
 
-if (btnIMC){
-    
+    const altura = Number(document.querySelector("#altura").value);
+
+    const generoSelecionado = document.querySelector(
+      'input[name="genero"]:checked',
+    );
+
+    const resultadoImc = document.querySelector("#resultadoImc");
+
+    if (!peso || !altura || !generoSelecionado) {
+      resultadoImc.textContent = "Preencha todos os campos.";
+
+      return;
+    }
+
+    const imc = calcularIMC(peso, altura);
+
+
+    const classificacao = classificarIMC(imc, generoSelecionado.value);
+
+    resultadoImc.textContent = `IMC: ${imc.toFixed(2)} | ${classificacao}`;
+  });
 }
