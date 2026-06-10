@@ -65,22 +65,23 @@ if (btnImc) {
 }
 
 
-// const btnConverterMoeda = document.querySelector(#btnConverterMoeda)
+const btnConverterMoeda = document.querySelector(#btnConverterMoeda)
 
-// if  (btnConverterMoeda) {
-//     btnConverterMoeda.addEventListener("click", async () => {
-//         const Valor = Number (document.querySelector("#valorMoeda").value);
-
-
-//         const tipo = document.querySelector("#tipoConversao").value;
+if  (btnConverterMoeda) {
+    btnConverterMoeda.addEventListener("click", async () => {
+        const Valor = Number (document.querySelector("#valorMoeda").value);
 
 
-//         const resultadoMoeda = querySelector("resultadoMoeda");
+        const tipo = document.querySelector("#tipoConversao").value;
+
+
+        const resultadoMoeda = querySelector("resultadoMoeda");
         
         
 
-//         if (!Valor) {
+        if (!Valor) {
 
-//           resultadoMoeda = document.querySelector(#tipo)
-//         }
+          resultadoMoeda = document.querySelector(#tipo)
+        }
+        
         
