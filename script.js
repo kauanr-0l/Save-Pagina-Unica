@@ -70,3 +70,5 @@ const btnConverterMoeda = document.querySelector(#btnConverterMoeda)
 if  (btnConverterMoeda) {
     btnConverterMoeda.addEventListener("click", async () => {
         const Valor = Number (document.querySelector("#valorMoeda").value);
+        
+        
