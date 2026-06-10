@@ -81,7 +81,24 @@ if  (btnConverterMoeda) {
 
         if (!Valor) {
 
-          resultadoMoeda = document.querySelector(#tipo)
+          resultadoMoeda.textContent =  "Digite Um Valor";
+
+          return;
+
+
+        }
+
+
+        try {
+          const resposta = await fetch("https://economia.awesomeapi.com.br/json/last/USD-BRL");
         }
         
-        
+        const dados = await resposta.json();
+
+        const cotacao = Number(dados.USDBRL.bid);
+
+
+        let resultado;
+         if (tipo==="brl-usd"){
+          
+         }
