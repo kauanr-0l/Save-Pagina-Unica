@@ -63,21 +63,13 @@
 
                 <div class="genero">
 
-                    <input
-                        type="radio"
-                        name="genero"
-                        id="masculino"
-                        value="masculino">
+                    <input type="radio" name="genero" id="masculino" value="masculino">
 
                     <label for="masculino">
                         Masculino
                     </label>
 
-                    <input
-                        type="radio"
-                        name="genero"
-                        id="feminino"
-                        value="feminino">
+                    <input type="radio" name="genero" id="feminino" value="feminino">
 
                     <label for="feminino">
                         Feminino
@@ -93,35 +85,38 @@
 
             </section>
 
-            <section id="temperatura" class = "pagina">
-                <h2>Conversor de Temperatura</h2>
+            <section id="temperatura" class="pagina">
+
+                <h2>
+                    Conversor de Temperatura
+                </h2>
+
                 <label>Valor</label>
-                <input type="number" id = "valorTemperatura">
+
+                <input type="number" id="valorTemperatura">
+
                 <select id="tipoTemperatura">
 
                     <option value="c-f">
-                        Celsius - Fahrenheitt
+                        Celsius → Fahrenheit
                     </option>
 
                     <option value="f-c">
-                        Fahrenheitt - Celsius
+                        Fahrenheit → Celsius
                     </option>
-
-                    <button id="btnTemperatura">Converter</button>
-
-                    <div id ="resultadoTemperatura"></div>
-
 
                 </select>
 
+                <button id="btnTemperatura">
+                    Converter
+                </button>
 
-
+                <div id="resultadoTemperatura"></div>
 
             </section>
 
-           
 
-    <script src="script.js"></script>
+            <script src="script.js"></script>
 
 </body>
 

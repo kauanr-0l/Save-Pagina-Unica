@@ -63,6 +63,9 @@ if (btnImc) {
   });
 }
 
+
+//Money
+
 const btnConverterMoeda = document.querySelector("#btnConverterMoeda");
 
 if (btnConverterMoeda) {
@@ -103,3 +106,7 @@ if (btnConverterMoeda) {
     }
   });
 }
+
+
+// Hot temperatura
+

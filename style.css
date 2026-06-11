@@ -75,3 +75,11 @@ select,
 button {
     padding: 10px;
 }
+
+
+#resultadoMoeda,
+#resultadoImc,
+#resultadoTemperatura{
+    margin-top: 10px;
+    font-weight: bold;
+}
