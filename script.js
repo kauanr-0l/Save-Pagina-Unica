@@ -110,3 +110,24 @@ if (btnConverterMoeda) {
 
 // Hot temperatura
 
+const btnTemperatura = document.querySelector("#btnTemperatura");
+
+if (btnTemperatura) {
+  btnTemperatura.addEventListener("click", () => {
+    const valor = number (document.querySelector("#valorTemperatura").value);
+    const tipo = document.querySelector("#tipoTemperatura").value;
+    const resultadoTemperatura = document.querySelector("#resultadoTemperatura");
+
+    let resultado;
+    
+    if (tipo === "c-f"){
+      resultado = (valor * 9 / 5) + 32;
+      resultadoTemperatura.textContent =  `${resultado.toFixed(2)} °F`;
+    } else{
+      resultado = (valor - 32) * 5 / 9;
+      resultadoTemperatura.textContent =    `${resultado.toFixed(2)} °C`;
+         }
+    });
+}
+
+
