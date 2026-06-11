@@ -57,48 +57,49 @@ if (btnImc) {
 
     const imc = calcularIMC(peso, altura);
 
-
     const classificacao = classificarIMC(imc, generoSelecionado.value);
 
     resultadoImc.textContent = `IMC: ${imc.toFixed(2)} | ${classificacao}`;
   });
 }
 
+const btnConverterMoeda = document.querySelector("#btnConverterMoeda");
 
-const btnConverterMoeda = document.querySelector(#btnConverterMoeda)
+if (btnConverterMoeda) {
+  btnConverterMoeda.addEventListener("click", async () => {
+    const valor = Number(document.querySelector("#valorMoeda").value);
 
-if  (btnConverterMoeda) {
-    btnConverterMoeda.addEventListener("click", async () => {
-        const Valor = Number (document.querySelector("#valorMoeda").value);
+    const tipo = document.querySelector("#tipoConversao").value;
 
+    const resultadoMoeda = document.querySelector("#resultadoMoeda");
 
-        const tipo = document.querySelector("#tipoConversao").value;
+    if (!valor) {
+      resultadoMoeda.textContent = "Digite Um Valor";
 
+      return;
+    }
 
-        const resultadoMoeda = querySelector("resultadoMoeda");
-        
-        
+    try {
+      const resposta = await fetch(
+        "https://economia.awesomeapi.com.br/json/last/USD-BRL",
+      );
 
-        if (!Valor) {
+      const dados = await resposta.json();
 
-          resultadoMoeda.textContent =  "Digite Um Valor";
+      const cotacao = Number(dados.USDBRL.bid);
 
-          return;
+      let resultado;
+      if (tipo === "brl-usd") {
+        resultado = valor / cotacao;
 
+        resultadoMoeda.textContent = `US$ ${resultado.toFixed(2)} | Cotação: R$ ${cotacao.toFixed(2)}`;
+      } else {
+        resultado = valor * cotacao;
 
-        }
-
-
-        try {
-          const resposta = await fetch("https://economia.awesomeapi.com.br/json/last/USD-BRL");
-        }
-        
-        const dados = await resposta.json();
-
-        const cotacao = Number(dados.USDBRL.bid);
-
-
-        let resultado;
-         if (tipo==="brl-usd"){
-          
-         }
+        resultadoMoeda.textContent = `R$ ${resultado.toFixed(2)} | Cotação: R$ ${cotacao.toFixed(2)}`;
+      }
+    } catch {
+      resultadoMoeda.textContent = "Erro ao buscar Cotação";
+    }
+  });
+}
