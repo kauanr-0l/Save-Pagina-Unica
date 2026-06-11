@@ -79,7 +79,8 @@ button {
 
 #resultadoMoeda,
 #resultadoImc,
-#resultadoTemperatura{
+#resultadoTemperatura,
+#resultadoVelocidade{
     margin-top: 10px;
     font-weight: bold;
 }
