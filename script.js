@@ -153,26 +153,29 @@ if (btnVelocidade) {
               const resultadoVelocidade =
             document.querySelector("#resultadoVelocidade");
 
-        let resultado;
-          if (tipo === "kmh-ms") {
+        let resultado 
+          if (tipo === "kmh-mph") {
 
-             resultado =
-                valor / 3.6;
+    resultado =
+        valor * 0.621371;
 
-            resultadoVelocidade.textContent =
-                `${resultado.toFixed(2)} m/s`;
-  } else {
-     resultado =
-                valor * 3.6;
+    resultadoVelocidade.textContent =
+        `${resultado.toFixed(2)} mph`;
 
-            resultadoVelocidade.textContent =
-                `${resultado.toFixed(2)} km/h`;
-        }
+} else {
+
+    resultado =
+        valor / 0.621371;
+
+    resultadoVelocidade.textContent =
+        `${resultado.toFixed(2)} km/h`;
+} 
     });
 }
 
 
 
+// é mt é massa
 const btnMassa =
     document.querySelector("#btnMassa");
 
@@ -193,23 +196,38 @@ if (btnMassa) {
 
         let resultado;
 
-          if (tipo === "kg-g") {
+         if (tipo === "kg-lbs") {
 
-             resultado =
-                valor * 1000;
+    resultado =
+        valor * 2.20462;
 
-            resultadoMassa.textContent =
-                `${resultado.toFixed(2)} g`;
+    resultadoMassa.textContent =
+        `${resultado.toFixed(2)} lbs`;
 
-        } else {
-  resultado =
-                valor / 1000;
+} else {
 
-            resultadoMassa.textContent =
-                `${resultado.toFixed(2)} kg`;
-        }
-    });
+    resultado =
+        valor / 2.20462;
+
+    resultadoMassa.textContent =
+        `${resultado.toFixed(2)} kg`;
 }
+
+
+    });}
+
+
+
+    
+
+
+
+
+
+
+
+
+
 
 
 

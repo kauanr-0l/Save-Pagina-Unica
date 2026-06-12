@@ -13,8 +13,8 @@
     <header>
         <h1>Ferramentas Ferramentais</h1>
         <button id="btnTema">
-        🌙 Modo Escuro
-    </button>
+            🌙 Modo Escuro
+        </button>
     </header>
 
     <div class="container">
@@ -101,11 +101,11 @@
                 <select id="tipoTemperatura">
 
                     <option value="c-f">
-                        Celsius → Fahrenheit
+                        Celsius -  Fahrenheit
                     </option>
 
                     <option value="f-c">
-                        Fahrenheit → Celsius
+                        Fahrenheit - Celsius
                     </option>
 
                 </select>
@@ -125,11 +125,11 @@
                 <label>valor</label>
                 <input type="number" id="valorVelocidade">
                 <select id="tipoVelocidade">
-                    <option value="kmh-ms">km/h - m/s
+                    <option value="kmh-mph">km/h - mph
 
                     </option>
 
-                    <option value="ms-kmh">m/s - km/h</option>
+                    <option value="mph-kmh">mph - km/h</option>
 
                 </select>
 
@@ -148,7 +148,7 @@
                 <select id="tipoMassa">
 
                     <option value="kg-g">
-                        Kg → Gramas
+                        Kg Gramas
                     </option>
 
                     <option value="g-kg"> Gramas - Kg </option>
@@ -165,22 +165,23 @@
 
             <section id="regra-de-tres" class="pagina">
 
-                <h2>Regra de tres</h2>
+                <h2>Regra de Três</h2>
 
-                <input type="number" id="valorA" placeholder="Valor A">
+                <label>A</label>
+                <input type="number" id="valorA">
 
-                <input type="number" id="valorB" placeholder="Valor B">
+                <label>B</label>
+                <input type="number" id="valorB">
 
-                <input type="number" id="valorC" placeholder="Valor C">
+                <label>C</label>
+                <input type="number" id="valorC">
+
+                <label>X</label>
+                <input type="number" id="resultadoRegraTres" readonly>
 
                 <button id="btnRegraTres">
                     Calcular
                 </button>
-
-                <div id="resultadoRegraTres"></div>
-
-
-
 
             </section>
 
@@ -193,7 +194,7 @@
 
 
 
-            
+
 
 
 
