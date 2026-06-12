@@ -63,7 +63,6 @@ if (btnImc) {
   });
 }
 
-
 //Money
 
 const btnConverterMoeda = document.querySelector("#btnConverterMoeda");
@@ -107,38 +106,68 @@ if (btnConverterMoeda) {
   });
 }
 
-
 // Hot temperatura
 
-const btnTemperatura =
-    document.querySelector("#btnTemperatura");
+const btnTemperatura = document.querySelector("#btnTemperatura");
 
-    if (btnTemperatura) {
-         btnTemperatura.addEventListener("click", () => {
-           const valor =
+if (btnTemperatura) {
+  btnTemperatura.addEventListener("click", () => {
+    const valor = Number(document.querySelector("#valorTemperatura").value);
+
+    const tipo = document.querySelector("#tipoTemperatura").value;
+    const resultadoTemperatura = document.querySelector(
+      "#resultadoTemperatura",
+    );
+
+    let resultado;
+    if (tipo === "c-f") {
+      resultado = (valor * 9) / 5 + 32;
+
+      resultadoTemperatura.textContent = `${resultado.toFixed(2)} °F`;
+    } else {
+      resultado = ((valor - 32) * 5) / 9;
+
+      resultadoTemperatura.textContent = `${resultado.toFixed(2)} °C`;
+    }
+  });
+}
+
+//Velocidade
+
+const btnVelocidade =
+    document.querySelector("#btnVelocidade");
+
+
+if (btnVelocidade) {
+
+    btnVelocidade.addEventListener("click", () => {
+
+       const valor =
             Number(
-                document.querySelector("#valorTemperatura").value
+                document.querySelector("#valorVelocidade").value
             );
 
- const tipo =
-            document.querySelector("#tipoTemperatura").value;
-    const resultadoTemperatura =
-            document.querySelector("#resultadoTemperatura");
+              const tipo =
+            document.querySelector("#tipoVelocidade").value;
+
+              const resultadoVelocidade =
+            document.querySelector("#resultadoVelocidade");
 
         let resultado;
-          if (tipo === "c-f") {
-            resultado =
-                (valor * 9 / 5) + 32;
+          if (tipo === "kmh-ms") {
 
-            resultadoTemperatura.textContent =
-                `${resultado.toFixed(2)} °F`;
+             resultado =
+                valor / 3.6;
 
-        } else {
-  resultado =
-                (valor - 32) * 5 / 9;
+            resultadoVelocidade.textContent =
+                `${resultado.toFixed(2)} m/s`;
+  } else {
+     resultado =
+                valor * 3.6;
 
-            resultadoTemperatura.textContent =
-                `${resultado.toFixed(2)} °C`;
+            resultadoVelocidade.textContent =
+                `${resultado.toFixed(2)} km/h`;
         }
     });
 }
+
