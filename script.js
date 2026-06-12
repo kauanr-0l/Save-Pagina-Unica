@@ -188,3 +188,49 @@ if (btnMassa) {
             const tipo =
             document.querySelector("#tipoMassa").value;
 
+             const resultadoMassa =
+            document.querySelector("#resultadoMassa");
+
+        let resultado;
+
+          if (tipo === "kg-g") {
+
+             resultado =
+                valor * 1000;
+
+            resultadoMassa.textContent =
+                `${resultado.toFixed(2)} g`;
+
+        } else {
+  resultado =
+                valor / 1000;
+
+            resultadoMassa.textContent =
+                `${resultado.toFixed(2)} kg`;
+        }
+    });
+}
+
+
+
+
+const btnTema =
+    document.querySelector("#btnTema");
+
+btnTema.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if (
+        document.body.classList.contains("dark-mode")
+    ) {
+
+        btnTema.textContent =
+            "☀️ Modo Claro";
+
+    } else {
+
+        btnTema.textContent =
+            "🌙 Modo Escuro";
+    }
+});
