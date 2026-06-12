@@ -171,3 +171,20 @@ if (btnVelocidade) {
     });
 }
 
+
+
+const btnMassa =
+    document.querySelector("#btnMassa");
+
+if (btnMassa) {
+
+   btnMassa.addEventListener("click", () => {
+
+    const valor =
+            Number(
+                document.querySelector("#valorMassa").value
+            );
+
+            const tipo =
+            document.querySelector("#tipoMassa").value;
+
