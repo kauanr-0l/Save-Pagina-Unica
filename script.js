@@ -237,19 +237,23 @@ if (btnRegraTres) {
         const resultado =
             document.querySelector("#resultadoRegraTres");
 
-        if (!a || !b || !c) {
 
-            resultado.value = "";
+            const resultaConta = (c * b) /a;
 
-            return;
-        }
+            console.log(resultaConta);
+            
+            if(!isFinite(resultaConta)) {
+              
+                document.getElementById("resultadoRegraTres").innerText =
+                    `Não é possível efetuar o calculo. Colocar um valor Válido.`
 
-        const x =
-            (b * c) / a;
+            } 
+              else {
+              document.getElementById("resultadoRegraTres").innerText = resultaConta.toFixed(2);
+            }
 
-        resultado.value =
-            x.toFixed(2);
     });
+
 }
 
 
