@@ -218,9 +218,39 @@ if (btnMassa) {
 
 
 
-    
+  const btnRegraTres =
+    document.querySelector("#btnRegraTres");
 
+if (btnRegraTres) {
 
+    btnRegraTres.addEventListener("click", () => {
+
+        const a =
+            Number(document.querySelector("#valorA").value);
+
+        const b =
+            Number(document.querySelector("#valorB").value);
+
+        const c =
+            Number(document.querySelector("#valorC").value);
+
+        const resultado =
+            document.querySelector("#resultadoRegraTres");
+
+        if (!a || !b || !c) {
+
+            resultado.value = "";
+
+            return;
+        }
+
+        const x =
+            (b * c) / a;
+
+        resultado.value =
+            x.toFixed(2);
+    });
+}
 
 
 
